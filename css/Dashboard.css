@@ -9,7 +9,7 @@
 }
 
 .dashboard header {
-  height: 26%;
+  min-height: 26%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -27,12 +27,27 @@
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  .dashboard header .top {
+    width: 100%;
+    height: 50%;
+    padding: 0 30px;
+  }
+}
+
 .dashboard header .top .gig {
   font-family: 'Montserrat', sans-serif;
-  font-size: 40px;
+  font-size: 3.5rem;
   color: #2C263D;
   opacity: 0.8;
-  font-weight: 700;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard header .top .gig {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
 }
 
 .dashboard header .top button {
@@ -50,6 +65,14 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+  .dashboard header .top button {
+    width: 100px;
+    height: 40px;
+    padding: 5px 10px;
+  }
+}
+
 .dashboard header .top button:hover {
   border: none;
   outline: none;
@@ -62,6 +85,18 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: nill;
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard header .down {
+    width: 100%;
+    min-height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 }
 
 .dashboard header .down .option-box {
@@ -80,6 +115,13 @@
   color: #aeadaf;
 }
 
+@media screen and (max-width: 768px) {
+  .dashboard header .down .option-box .option-label {
+    font-size: 12px;
+    padding: 2px 6px;
+  }
+}
+
 .dashboard header .down .option-box #option-clicked {
   font-weight: bolder;
   color: #585461;
@@ -89,6 +131,12 @@
   padding: 5px 15px;
   border-radius: 8px;
   background: #fff2d3 0% 0% no-repeat padding-box;
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard header .down .option-box .number-box {
+    padding: 2px 9px;
+  }
 }
 
 .dashboard header .down .option-box .number-box .number {
@@ -109,14 +157,24 @@
 }
 
 .dashboard main {
-  height: 20%;
+  min-height: 20%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.dashboard main .buttons {
+@media screen and (max-width: 768px) {
+  .dashboard main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.dashboard main .category {
   border: 1px solid #EEEEEE;
   display: flex;
   flex-direction: row;
@@ -127,11 +185,11 @@
   border-radius: 15px;
 }
 
-.dashboard main #btn-active {
+.dashboard main #category-active {
   border: 2px solid #E18700;
 }
 
-.dashboard main #btn-active .design-active {
+.dashboard main #category-active .design-active {
   color: #FBB30B;
 }
 
@@ -148,29 +206,63 @@
   padding: 20px 0;
 }
 
+@media screen and (max-width: 768px) {
+  .dashboard section .section-down {
+    width: 100%;
+    padding: 20px 0;
+  }
+}
+
 .dashboard section .section-down table {
   width: 100%;
 }
 
-.dashboard section .section-down table tr th {
+@media screen and (max-width: 768px) {
+  .dashboard section .section-down table {
+    padding: 0 5px;
+  }
+}
+
+.dashboard section .section-down table thead tr th, .dashboard section .section-down table tbody tr th {
   padding: 10px 0;
   text-align: left;
 }
 
-.dashboard section .section-down table tr td {
+@media screen and (max-width: 768px) {
+  .dashboard section .section-down table thead tr th, .dashboard section .section-down table tbody tr th {
+    padding: 10px 5px;
+  }
+  .dashboard section .section-down table thead tr th .image, .dashboard section .section-down table tbody tr th .image {
+    display: none;
+  }
+}
+
+.dashboard section .section-down table thead tr td, .dashboard section .section-down table tbody tr td {
   background: white;
   padding: 5px 0;
   vertical-align: center;
 }
 
-.dashboard section .section-down table tr .check-box {
+@media screen and (max-width: 768px) {
+  .dashboard section .section-down table thead tr td, .dashboard section .section-down table tbody tr td {
+    padding: 5px;
+  }
+}
+
+.dashboard section .section-down table thead tr .check-box, .dashboard section .section-down table tbody tr .check-box {
   font-size: larger;
 }
 
-.dashboard section .section-down table tr .delete .delete-btn {
+.dashboard section .section-down table thead tr .delete .delete-btn, .dashboard section .section-down table tbody tr .delete .delete-btn {
   background: #FCF4E6 0% 0% no-repeat padding-box;
   border-radius: 10px;
-  padding: 7px 40px;
+  padding: 7px 25px;
   border: none;
   outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard section .section-down table thead tr .delete .delete-btn, .dashboard section .section-down table tbody tr .delete .delete-btn {
+    padding: 4px 10px;
+  }
 }

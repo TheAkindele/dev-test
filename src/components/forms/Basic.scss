@@ -6,12 +6,20 @@
     justify-content: $justify;
     align-items: $align;
 }
+@mixin mediaQuery() {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
 
 .basic{
     width: 90%;
     height: 100%;
     //border: 1px solid green;
     @include flex(column, flex-start, flex-start);
+    @include mediaQuery() {
+        width: 98%;
+    }
 
     form{
         width: 90%;
@@ -20,23 +28,46 @@
         @include flex(row, space-between, flex-start);
         flex-wrap: wrap;
         //border: 1px solid red;
+        @include mediaQuery() {
+            width: 100%;
+            @include flex(column, space-around, center);
+            flex-wrap: nowrap;
+            height: 100%;
+            padding-left: 0;
+            //border: 1px solid blue;
+        }
 
         .form-group{
             @include flex(column, center, flex-start);
             width: 48%;
             margin: 10px 0;
             //border: 1px solid blue;
+            @include mediaQuery() {
+                width: 95%;
+                @include flex(column, space-around, center);
+                margin: 5px 0;
+                //border: 1px solid red;
+            }
 
             label{
                 padding: 5px 0;
+                @include mediaQuery() {
+                    padding: 5px;
+                }
             }
             input, select{
                 width: 100%;
                 padding: 10px 5px;
+                @include mediaQuery() {
+                    padding: 10px 2px;
+                }
             }
         }
         .add{
             width: 100%;
+            @include mediaQuery() {
+                width: 95%;
+            }
         }
 
         .button-btn{
@@ -44,6 +75,11 @@
             width: 100%;
             @include flex(row, flex-end, flex-end);
             //border: 1px solid red;
+            @include mediaQuery() {
+                margin: 5px 0;
+                @include flex(row, center, center);
+                //border: 1px solid red;
+            }
 
             input{
                 padding: 8px 18px;
@@ -51,6 +87,10 @@
                 border: none;
                 border-radius: 8px;
                 cursor: pointer;
+                @include mediaQuery() {
+                    margin-right: 0;
+                    padding: 3px 8px;
+                }
             }
 
             button{
@@ -60,6 +100,9 @@
                 border: none;
                 border-radius: 8px;
                 cursor: pointer;
+                @include mediaQuery() {
+                    padding: 5px 15px;
+                }
 
                 &:hover{
                     border: none;

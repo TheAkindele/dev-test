@@ -25,12 +25,16 @@ a{
     width: 100%;
     min-height: 100vh;
     @include flex(row, nill, nill);
+    //background: pink;
 }
 
 ////homepage //////
 .homepage {
     width: 85%;
-    height: 100vh;
+    min-height: 100vh;
     @include flex(column, nill, nill);
+    @media screen and (max-width: 768px) {
+       width: 100%;
+    }
 }
 

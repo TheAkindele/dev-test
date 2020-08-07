@@ -9,25 +9,27 @@ import account from '../../assets/account-icon.png'
 const SidebarNav = () => {
     return (
         <aside>
-            <div className="logo-box">
-                <img src={logo} alt="logo-icon" className='logo' />
-            </div>
-            <div className="sidebar-down">
-                <div className="menu">
-                    <img src={dashboard} alt="dashboard" className="icon" />
-                    <div className="label">Dashboard</div>
+            <div className="sidebar">
+                <div className="logo-box">
+                    <img src={logo} alt="logo-icon" className='logo' />
                 </div>
-                <div className="menu">
-                    <img src={gigs} alt="gigs" className="icon" />
-                    <div className="label">Gigs</div>
-                </div>
-                <div className="menu">
-                    <img src={company} alt="company" className="icon" />
-                    <div className="label">Company</div>
-                </div>
-                <div className="menu">
-                    <img src={account} alt="account" className="icon" />
-                    <div className="label">Acount</div>
+                <div className="sidebar-down">
+                    <div className="menu">
+                        <img src={dashboard} alt="dashboard" className="icon" />
+                        <div className="label">Dashboard</div>
+                    </div>
+                    <div className="menu">
+                        <img src={gigs} alt="gigs" className="icon" />
+                        <div className="label">Gigs</div>
+                    </div>
+                    <div className="menu">
+                        <img src={company} alt="company" className="icon" />
+                        <div className="label">Company</div>
+                    </div>
+                    <div className="menu">
+                        <img src={account} alt="account" className="icon" />
+                        <div className="label">Acount</div>
+                    </div>
                 </div>
             </div>
         </aside>

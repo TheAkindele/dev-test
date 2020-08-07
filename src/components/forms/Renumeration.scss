@@ -4,6 +4,11 @@
     justify-content: $justify;
     align-items: $align;
 }
+@mixin mediaQuery() {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
 
 .renumeration{
     width: 100%;
@@ -13,10 +18,13 @@
 
     .form-2{
         width: 90%;
-        height: 30%;
+        min-height: 30%;
         padding: 15px;
         @include flex(column, nill, flex-start);
         //border: 1px solid green;
+        @include mediaQuery() {
+            min-height: 45%;
+        }
 
         .form-groups{
             @include flex(column, flex-start, flex-start);
@@ -29,9 +37,21 @@
             .form-input{
                 width: 100%;
                 @include flex(row, space-between, center);
+                @include mediaQuery() {
+                    width: 95%;
+                    @include flex(column, space-between, center);
+                    //border: 1px solid red;
+                    padding: 5px 0;
+                }
+
                 input{
                     width: 48%;
                     padding: 10px 5px;
+                    @include mediaQuery() {
+                        width: 90%;
+                        padding: 7px 0;
+                        margin: 3px 0;
+                    }
                 }
             }
             

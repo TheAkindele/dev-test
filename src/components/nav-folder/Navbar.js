@@ -4,10 +4,20 @@ import bell from '../../assets/bell-icon.png'
 import email from '../../assets/email-icon.png'
 import setting from '../../assets/setting-icon.png'
 import man from '../../assets/man.png'
+import logo from '../../assets/logo.png'
 
 const Navbar = () => {
     return (
         <div className='navbar'>
+            <div className="menu-bar">
+                <div className="menu-item">
+                    <img src={logo} alt="logo-icon" className='logo' />
+                </div>
+                <div className="label">Dashboard</div>
+                <div className="label">Gigs</div>
+                <div className="label">Company</div>
+                <div className="label">Acount</div>
+            </div>
             <div className="nav-box">
                 <div className="search-box">
                     <input type="text" placeholder='Search' />

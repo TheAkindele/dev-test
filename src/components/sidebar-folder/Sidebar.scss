@@ -4,28 +4,47 @@
     justify-content: $justify;
     align-items: $align;
 }
+@mixin mediaQuery() {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
 
 ///sidebar//////
 aside{
     background: #FEFEFF 0% 0% no-repeat padding-box;
     width: 20%;
     height: 100vh;
-    padding-top: 70px;
-    //border: 1px solid #2C263D;
-
-    .logo-box{
-        padding-left: 40px;
+    //padding-top: 40px;
+    //z-index: 10;
+    @include flex(column, flex-start, center);
+    //border: 1px solid red;
+    display: block;
+    @include mediaQuery() {
+        display: none;
     }
+
+    .sidebar{
+        width: 100%;
+        padding-top: 30px;
+        @include flex(column, flex-start, center);
+        //border: 1px solid green;
+        @include mediaQuery() {
+            
+        }
+
     .sidebar-down{
         padding-top: 40px;
 
         .menu{
-            padding: 10px 0 10px 35px;
             @include flex(row, flex-start, nill);
+            padding: 10px 0;
 
             .label{
                 padding-left: 10px;
             }
         }
     }
+    }
+    
 }

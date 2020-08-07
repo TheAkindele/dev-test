@@ -5,6 +5,12 @@
     align-items: $align;
 }
 
+@mixin mediaQuery() {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
 /////// dashboard ///////
 .dashboard{
     min-height: 85%;
@@ -13,7 +19,7 @@
     background: #FBFBFF 0% 0% no-repeat padding-box;
 
     header{
-        height: 26%;
+        min-height: 26%;
         width: 100%;
         @include flex(column, center, center);
         border-bottom: 1px solid #f1f1f5;
@@ -24,13 +30,24 @@
             width: 90%;
             @include flex(row, space-between, center);
            // border: 1px solid pink;
+            @include mediaQuery() {
+                width: 100%;
+                height: 50%;
+                padding: 0 30px;
+                //border: 1px solid red;
+            }
 
             .gig{
                 font-family: 'Montserrat', sans-serif;
-                font-size: 40px;
+                font-size: 3.5rem;
+                //font-size: 40px;
                 color: #2C263D;
                 opacity: 0.8;
-                font-weight: 700;
+                font-weight: 900;
+                @include mediaQuery() {
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                }
             }
 
             button{
@@ -43,6 +60,11 @@
                 @include flex(row, space-around, center);
                 color: white;
                 cursor: pointer;
+                @include mediaQuery() {
+                    width: 100px;
+                    height: 40px;
+                    padding: 5px 10px;
+                }
 
                 &:hover{
                     border: none;
@@ -55,6 +77,13 @@
             height: 30%;
             width: 90%;
             @include flex(row, space-between, nill);
+            @include mediaQuery() {
+                width: 100%;
+                min-height: 50%;
+                @include flex(row, space-around, center);
+                flex-wrap: wrap;
+                //border: 1px solid blue;
+            }
 
             .option-box{
                 @include flex(row, center, center);
@@ -66,7 +95,10 @@
                     font-size: 15px;
                     font-weight: bold;
                     color: #aeadaf;
-                    
+                    @include mediaQuery() {
+                        font-size: 12px;
+                        padding: 2px 6px;
+                    }
                 }
                 #option-clicked{
                    font-weight: bolder;
@@ -77,6 +109,9 @@
                     padding: 5px 15px;
                     border-radius: 8px;
                     background: #fff2d3 0% 0% no-repeat padding-box;
+                    @include mediaQuery() {
+                        padding: 2px 9px;
+                    }
 
                     .number{
                         color: #FBB30B;
@@ -98,24 +133,26 @@
     }
 
     main{
-        height: 20%;
+        min-height: 20%;
         @include flex(row, space-evenly, center);
-        //padding: 50px 0;
-        //border: 1px solid red;
+        @include mediaQuery() {
+            @include flex(row, space-around, center);
+            flex-wrap: wrap;
+            //border: 1px solid red;
+        }
 
-        .buttons{
+        .category{
             border: 1px solid #EEEEEE;
             @include flex(row, space-around, center);
             min-width: 13%;
             height: 41px;
             border-radius: 15px;
         }
-        #btn-active{
+        #category-active{
             border: 2px solid #E18700;
 
             .design-active{
                 color: #FBB30B;
-                
             }
         }
     }
@@ -127,37 +164,57 @@
         .section-down{
             width: 90%;
             padding: 20px 0;
+            @include mediaQuery() {
+                width: 100%;
+                padding: 20px 0;
+                //border: 1px solid blue;
+            }
 
             table{
                 width: 100%;
+                @include mediaQuery() {
+                    padding: 0 5px;
+                    //border: 1px solid red;
+                }
                 
-                tr{
+                thead, tbody {
+                    tr{
+                        th{
+                            padding: 10px 0;
+                            text-align: left;
+                            @include mediaQuery() {
+                                padding: 10px 5px;
 
-                    th{
-                        padding: 10px 0;
-                        text-align: left;
-                        
-                    }
-
-                    td{
-                        background: white;
-                        padding: 5px 0;
-                        vertical-align: center;
-                    }
-                    .check-box{
-                        font-size: larger;
-                    }
-                    .delete{
-                        .delete-btn{
-                            background: #FCF4E6 0% 0% no-repeat padding-box;
-                            border-radius: 10px;
-                            padding: 7px 40px;
-                            border: none;
-                            outline: none;
+                                .image{
+                                    display: none;
+                                }
+                            }
+                        }
+    
+                        td{
+                            background: white;
+                            padding: 5px 0;
+                            vertical-align: center;
+                            @include mediaQuery() {
+                                padding: 5px;
+                            }
+                        }
+                        .check-box{
+                            font-size: larger;
+                        }
+                        .delete{
+                            .delete-btn{
+                                background: #FCF4E6 0% 0% no-repeat padding-box;
+                                border-radius: 10px;
+                                padding: 7px 25px;
+                                border: none;
+                                outline: none;
+                                @include mediaQuery() {
+                                    padding: 4px 10px;
+                                }
+                            }
                         }
                     }
-
-                    //&:nth-child(even){background-color: #f2f2f2;}
                 }
             }
         }

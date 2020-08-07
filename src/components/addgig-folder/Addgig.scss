@@ -4,18 +4,24 @@
     justify-content: $justify;
     align-items: $align;
 }
+@mixin mediaQuery() {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
 
 .page-2{
     width: 100%;
     @include flex( column, center, center);
     min-height: 85vh;
     background: #FBFBFF 0% 0% no-repeat padding-box;
+    //border: 1px solid blue;
 
     .big-title{
         min-height: 10%;
         width: 95%;
         @include flex(column, center, nill);
-        //border: 1px solid blue;
+        //border: 1px solid cyan;
 
         .gig{
             font-family: 'Montserrat', sans-serif;
@@ -30,6 +36,7 @@
         @include flex(column, nill, nill);
         min-height: 85%;
         width: 95%;
+        //border: 1px solid red;
 
         .title{
             height: 15%;
@@ -46,9 +53,15 @@
         .main{
             //background: rgb(221, 221, 138);
             width: 70%;
-            height: 85%;
+            min-height: 85%;
             //padding: 15px 20px 15px 50px;
             @include flex(row, space-evenly, flex-start);
+            //border: 1px solid blue;
+            @include mediaQuery() {
+                width: 100%;
+                @include flex(column, flex-start, center);
+                //border: 1px solid red;
+            }
 
             .toggle-control{
                 width: 20%;
@@ -56,12 +69,25 @@
                 background: white;
                 border-radius: 13px;
                 @include flex(column, center, center);
+                //border: 1px solid cyan;
+                @include mediaQuery() {
+                    width: 100%;
+                    @include flex(row, space-between, center);
+                    height: 15%;
+                    //border: 1px solid red;
+                }
 
                 .form{
                     width: 100%;
                     height: 90%;
                     @include flex(column, space-around, center);
                     //border: 1px solid red;
+                    @include mediaQuery() {
+                        width: 100%;
+                        @include flex(row, space-evenly, center);
+                        //height: 15%;
+                        //border: 1px solid red;
+                    }
 
                     .group{
                         width: 90%;
@@ -82,6 +108,9 @@
                 border-radius: 13px;
                 background: white;
                 @include flex(column, center, center);
+                @include mediaQuery() {
+                    width: 95%;
+                }
             }
         }
     }

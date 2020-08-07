@@ -21,9 +21,15 @@ a {
 
 .homepage {
   width: 85%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: nill;
   align-items: nill;
+}
+
+@media screen and (max-width: 768px) {
+  .homepage {
+    width: 100%;
+  }
 }

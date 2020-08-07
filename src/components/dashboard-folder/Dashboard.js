@@ -40,102 +40,103 @@ const Dashboard = () => {
             </header>
 
             <main>
-                <div className="buttons">
+                <div className="category">
                     <p>Freelance</p>
                 </div>
-                <div className="buttons">
+                <div className="category">
                     <img src={keyword} alt="keywords" />
                     <p>Keywords</p>
                     <FiChevronDown />
                 </div>
-                <div className="buttons">
+                <div className="category">
                     <img src={location} alt="location" />
                     <p>Location</p>
                     <FiChevronDown />
                 </div>
-                <div className="buttons">
+                <div className="category">
                     <img src={remote} alt="remote" />
                     <p>Remote friendly</p>
                 </div>
-                <div className="buttons" id='btn-active'>
+                <div className="category" id='category-active'>
                     <img src={design} alt="design" />
                     <p className='design-active'>Design</p>
                     <p className='design-active' style={{ color: 'yellow' }}><GrFormCheckmark /></p>
                 </div>
-                <div className="buttons">
+                <div className="category">
                     <img src={contract} alt="contract" />
                     <p>Contract</p>
                 </div>
             </main>
 
             <section>
-
                 <div className="section-down">
                     <table>
-
-                        <tr>
-                            <th className='head'></th>
-                            <th className='head'>Role</th>
-                            <th className='head'>Company</th>
-                            <th className='head'>
-                                Date
-                                    <img src={arrows} alt="arrows" />
-                            </th>
-                            <th className='head'>
-                                Salary($)
-                                    <img src={arrows} alt="arrows" />
-                            </th>
-                            <th className='head'></th>
-                        </tr>
-
-                        <tr>
-                            <td className="check-box"><input type="checkbox" name="check" id="check" /></td>
-                            <td className="role">Product Designer</td>
-                            <td className="company">TM30</td>
-                            <td className="date">20th, June 2020</td>
-                            <td className="salary">20,000 - 30,000</td>
-                            <td className="delete"><button className="delete-btn">Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td className="check-box"><input type="checkbox" name="check" id="check" /></td>
-                            <td className="role">Product Designer</td>
-                            <td className="company">TM30</td>
-                            <td className="date">20th, June 2020</td>
-                            <td className="salary">20,000 - 30,000</td>
-                            <td className="delete"><button className="delete-btn">Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td className="check-box"><input type="checkbox" name="check" id="check" /></td>
-                            <td className="role">Product Designer</td>
-                            <td className="company">TM30</td>
-                            <td className="date">20th, June 2020</td>
-                            <td className="salary">20,000 - 30,000</td>
-                            <td className="delete"><button className="delete-btn">Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td className="check-box"><input type="checkbox" name="check" id="check" /></td>
-                            <td className="role">Product Designer</td>
-                            <td className="company">TM30</td>
-                            <td className="date">20th, June 2020</td>
-                            <td className="salary">20,000 - 30,000</td>
-                            <td className="delete"><button className="delete-btn">Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td className="check-box"><input type="checkbox" name="check" id="check" /></td>
-                            <td className="role">Product Designer</td>
-                            <td className="company">TM30</td>
-                            <td className="date">20th, June 2020</td>
-                            <td className="salary">20,000 - 30,000</td>
-                            <td className="delete"><button className="delete-btn">Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td className="check-box"><input type="checkbox" name="check" id="check" /></td>
-                            <td className="role">Product Designer</td>
-                            <td className="company">TM30</td>
-                            <td className="date">20th, June 2020</td>
-                            <td className="salary">20,000 - 30,000</td>
-                            <td className="delete"><button className="delete-btn">Delete</button></td>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th className='head'></th>
+                                <th className='head'>Role</th>
+                                <th className='head'>Company</th>
+                                <th className='head'>
+                                    Date
+                                    <img src={arrows} alt="arrows" className='image' />
+                                </th>
+                                <th className='head'>
+                                    Salary($)
+                                    <img src={arrows} alt="arrows" className='image' />
+                                </th>
+                                <th className='head'></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td className="check-box"><input type="checkbox" name="check" id="check" /></td>
+                                <td className="role">Product Designer</td>
+                                <td className="company">TM30</td>
+                                <td className="date">20th June, 2020</td>
+                                <td className="salary">20,000 - 30,000</td>
+                                <td className="delete"><button className="delete-btn">Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td className="check-box"><input type="checkbox" name="check" id="check" /></td>
+                                <td className="role">Product Designer</td>
+                                <td className="company">TM30</td>
+                                <td className="date">20th June, 2020</td>
+                                <td className="salary">20,000 - 30,000</td>
+                                <td className="delete"><button className="delete-btn">Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td className="check-box"><input type="checkbox" name="check" id="check" /></td>
+                                <td className="role">Product Designer</td>
+                                <td className="company">TM30</td>
+                                <td className="date">20th June, 2020</td>
+                                <td className="salary">20,000 - 30,000</td>
+                                <td className="delete"><button className="delete-btn">Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td className="check-box"><input type="checkbox" name="check" id="check" /></td>
+                                <td className="role">Product Designer</td>
+                                <td className="company">TM30</td>
+                                <td className="date">20th June, 2020</td>
+                                <td className="salary">20,000 - 30,000</td>
+                                <td className="delete"><button className="delete-btn">Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td className="check-box"><input type="checkbox" name="check" id="check" /></td>
+                                <td className="role">Product Designer</td>
+                                <td className="company">TM30</td>
+                                <td className="date">20th June, 2020</td>
+                                <td className="salary">20,000 - 30,000</td>
+                                <td className="delete"><button className="delete-btn">Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td className="check-box"><input type="checkbox" name="check" id="check" /></td>
+                                <td className="role">Product Designer</td>
+                                <td className="company">TM30</td>
+                                <td className="date">20th June, 2020</td>
+                                <td className="salary">20,000 - 30,000</td>
+                                <td className="delete"><button className="delete-btn">Delete</button></td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             </section>
