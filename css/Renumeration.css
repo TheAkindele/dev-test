@@ -1,0 +1,74 @@
+.renumeration {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.renumeration .form-2 {
+  width: 90%;
+  height: 30%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: nill;
+  align-items: flex-start;
+}
+
+.renumeration .form-2 .form-groups {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.renumeration .form-2 .form-groups label {
+  padding: 5px 0;
+}
+
+.renumeration .form-2 .form-groups .form-input {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.renumeration .form-2 .form-groups .form-input input {
+  width: 48%;
+  padding: 10px 5px;
+}
+
+.renumeration .form-2 .buttons-btn {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.renumeration .form-2 .buttons-btn input {
+  padding: 8px 18px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.renumeration .form-2 .buttons-btn button {
+  padding: 10px 28px;
+  background: #2F417E 0% 0% no-repeat padding-box;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.renumeration .form-2 .buttons-btn button:hover {
+  border: none;
+  outline: none;
+}

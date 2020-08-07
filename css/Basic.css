@@ -1,0 +1,72 @@
+.basic {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.basic form {
+  width: 90%;
+  height: 95%;
+  padding-left: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.basic form .form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 48%;
+  margin: 10px 0;
+}
+
+.basic form .form-group label {
+  padding: 5px 0;
+}
+
+.basic form .form-group input, .basic form .form-group select {
+  width: 100%;
+  padding: 10px 5px;
+}
+
+.basic form .add {
+  width: 100%;
+}
+
+.basic form .button-btn {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.basic form .button-btn input {
+  padding: 8px 18px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.basic form .button-btn button {
+  padding: 10px 28px;
+  background: #2F417E 0% 0% no-repeat padding-box;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.basic form .button-btn button:hover {
+  border: none;
+  outline: none;
+}

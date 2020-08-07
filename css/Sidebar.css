@@ -1,0 +1,26 @@
+aside {
+  background: #FEFEFF 0% 0% no-repeat padding-box;
+  width: 20%;
+  height: 100vh;
+  padding-top: 70px;
+}
+
+aside .logo-box {
+  padding-left: 40px;
+}
+
+aside .sidebar-down {
+  padding-top: 40px;
+}
+
+aside .sidebar-down .menu {
+  padding: 10px 0 10px 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: nill;
+}
+
+aside .sidebar-down .menu .label {
+  padding-left: 10px;
+}
