@@ -2,25 +2,40 @@ aside {
   background: #FEFEFF 0% 0% no-repeat padding-box;
   width: 20%;
   height: 100vh;
-  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  display: block;
 }
 
-aside .logo-box {
-  padding-left: 40px;
+@media screen and (max-width: 768px) {
+  aside {
+    display: none;
+  }
 }
 
-aside .sidebar-down {
+aside .sidebar {
+  width: 100%;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+aside .sidebar .sidebar-down {
   padding-top: 40px;
 }
 
-aside .sidebar-down .menu {
-  padding: 10px 0 10px 35px;
+aside .sidebar .sidebar-down .menu {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: nill;
+  padding: 10px 0;
 }
 
-aside .sidebar-down .menu .label {
+aside .sidebar .sidebar-down .menu .label {
   padding-left: 10px;
 }
