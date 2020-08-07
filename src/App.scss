@@ -1,0 +1,36 @@
+//// fonts
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Montserrat&display=swap');
+
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+///App component ////////
+.App {
+    width: 100%;
+    min-height: 100vh;
+    @include flex(row, nill, nill);
+}
+
+////homepage //////
+.homepage {
+    width: 85%;
+    height: 100vh;
+    @include flex(column, nill, nill);
+}
+
