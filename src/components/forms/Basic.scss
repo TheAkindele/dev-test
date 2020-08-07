@@ -1,0 +1,73 @@
+//@import 'App/flex';
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+.basic{
+    width: 90%;
+    height: 100%;
+    //border: 1px solid green;
+    @include flex(column, flex-start, flex-start);
+
+    form{
+        width: 90%;
+        height: 95%;
+        padding-left: 25px;
+        @include flex(row, space-between, flex-start);
+        flex-wrap: wrap;
+        //border: 1px solid red;
+
+        .form-group{
+            @include flex(column, center, flex-start);
+            width: 48%;
+            margin: 10px 0;
+            //border: 1px solid blue;
+
+            label{
+                padding: 5px 0;
+            }
+            input, select{
+                width: 100%;
+                padding: 10px 5px;
+            }
+        }
+        .add{
+            width: 100%;
+        }
+
+        .button-btn{
+            margin: 20px 0;
+            width: 100%;
+            @include flex(row, flex-end, flex-end);
+            //border: 1px solid red;
+
+            input{
+                padding: 8px 18px;
+                margin-right: 10px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+
+            button{
+                padding: 10px 28px;
+                background: #2F417E 0% 0% no-repeat padding-box;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+
+                &:hover{
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+

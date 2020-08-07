@@ -1,0 +1,31 @@
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+///sidebar//////
+aside{
+    background: #FEFEFF 0% 0% no-repeat padding-box;
+    width: 20%;
+    height: 100vh;
+    padding-top: 70px;
+    //border: 1px solid #2C263D;
+
+    .logo-box{
+        padding-left: 40px;
+    }
+    .sidebar-down{
+        padding-top: 40px;
+
+        .menu{
+            padding: 10px 0 10px 35px;
+            @include flex(row, flex-start, nill);
+
+            .label{
+                padding-left: 10px;
+            }
+        }
+    }
+}

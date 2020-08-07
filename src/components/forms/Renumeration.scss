@@ -1,0 +1,69 @@
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+.renumeration{
+    width: 100%;
+    height: 100%;
+    @include flex(column, flex-start, flex-start);
+    //border: 1px solid red;
+
+    .form-2{
+        width: 90%;
+        height: 30%;
+        padding: 15px;
+        @include flex(column, nill, flex-start);
+        //border: 1px solid green;
+
+        .form-groups{
+            @include flex(column, flex-start, flex-start);
+            width: 100%;
+            //border: 1px solid blue;
+
+            label{
+                padding: 5px 0;
+            }
+            .form-input{
+                width: 100%;
+                @include flex(row, space-between, center);
+                input{
+                    width: 48%;
+                    padding: 10px 5px;
+                }
+            }
+            
+        }
+
+        .buttons-btn{
+            margin-top: 20px;
+            width: 100%;
+            @include flex(row, flex-end, flex-end);
+            //border: 1px solid red;
+
+            input{
+                padding: 8px 18px;
+                margin-right: 10px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+
+            button{
+                padding: 10px 28px;
+                background: #2F417E 0% 0% no-repeat padding-box;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+
+                &:hover{
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+    }
+}
